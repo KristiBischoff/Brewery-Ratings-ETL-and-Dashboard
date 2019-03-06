@@ -17,25 +17,23 @@ mongo = PyMongo(app, uri="mongodb://localhost:27017/craftapp")
 @app.route("/")
 def home():
 
-    # Find one record of data from the mongo database
-    beer_data = dumps(mongo.db.collection.find())
-    return(beer_data)
-
+    # Find records of data from the mongo database
+    beer_data = mongo.db.collection.find_one()
+    #return(beer_data)
     # Return template and data
     return render_template("index.html", craft_info=beer_data)
 
 
-
 # Route that will trigger the scrape function
 @app.route("/scrape")
-def scrape():
+def scraper():
 
     # Run the scrape function
     beer_data = craftapp.scrape_info()
-    print(beer_data)
+    #print(beer_data)
 
-    # Update the Mongo database using update and upsert=True
-    mongo.db.collection.drop()
+    #reset the Mongo database
+    #mongo.db.collection.drop()
     mongo.db.collection.insert_many(beer_data)
 
     # Redirect back to home page
