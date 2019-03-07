@@ -24,7 +24,7 @@ def scrape_info():
     browser = init_browser()
     #craft_info = {}
     #Create a random sample of 20 breweries
-    brewery2_df = brewery1_df.sample(20, random_state=0).copy()
+    brewery2_df = brewery1_df.sample(20).copy()
 
     base_url = 'https://untappd.com/'
 

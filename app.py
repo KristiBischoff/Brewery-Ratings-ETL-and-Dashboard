@@ -10,15 +10,17 @@ import craftapp
 app = Flask(__name__)
 
 # Use PyMongo to establish Mongo connection
-mongo = PyMongo(app, uri="mongodb://localhost:27017/craftapp")
-
+app.config["MONGO_URI"] = "mongodb://localhost:27017/craftapp"
+mongo = PyMongo(app)
+#reset the Mongo database
+#mongo.db.collection.drop()
 
 # Route to render index.html template using data from Mongo
 @app.route("/")
 def home():
 
     # Find records of data from the mongo database
-    beer_data = mongo.db.collection.find_one()
+    beer_data = mongo.db.collection.find()
     #return(beer_data)
     # Return template and data
     return render_template("index.html", craft_info=beer_data)
@@ -33,7 +35,7 @@ def scraper():
     #print(beer_data)
 
     #reset the Mongo database
-    #mongo.db.collection.drop()
+    mongo.db.collection.drop()
     mongo.db.collection.insert_many(beer_data)
 
     # Redirect back to home page
