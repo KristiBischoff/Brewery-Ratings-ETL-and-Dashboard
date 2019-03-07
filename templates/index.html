@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Page Title</title>
+        <title>ETL Project</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -28,22 +28,25 @@
     </div>
 
     <div class="row">
-      <div class="col-md-12">"
+      <div class="col-md-12">
           <div>
+            <!--Craft beer data-->
               <ul style="list-style: none;">
                 {% for record in craft_info %}
-        <h4 class="heading">Brewery: {{craft_info["name"]}}</h4>
-        <small>Rating: {{craft_info["rating"]}}</small>
-        {% endfor %}
-        </ul>
-      </div>
-    </div>
-    <div>
-      <img src="/static/images/report.png" alt="reportimage" width="20%" height="auto">  
+                  <h4 class="heading">Brewery: {{craft_info["name"]}}</h4>
+                    <small>Rating: {{craft_info["rating"]}}</small>
+                {% endfor %}
+              </ul>
+          </div>
+       </div>
+        <div>
+            <p>View <a href="project2.html">Final Report</a></p>
+            <p>View <a href="result.html">craft beer table</a></p>
+          <img src="/static/images/report.png" alt="reportimage" width="20%" height="auto">  
+        </div>
     </div>
   </div>
 </body>
 
 </html>
-<body>
 
