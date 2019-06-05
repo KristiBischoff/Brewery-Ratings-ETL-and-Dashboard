@@ -18,5 +18,5 @@ The scrape function stored the python dictionary in MongoDB, and bson.json was u
 
 ## Dashboard Example: 
 
-![Dashboard](static/images/BrewApp_pic1.jpg)
+![Dashboard](Images/BrewApp_pic1.jpg)
 
