@@ -16,7 +16,5 @@ The breweries csv required one column to be dropped. The name of the brewery, st
 
 The scrape function stored the python dictionary in MongoDB, and bson.json was used to identify records from MongoDB. Flask templating was used to develop an HTML page that displays the data. The HTML page called craft.html provides a button that automatically performs the web scrape of the data. Web scraping of the untappd data was chosen due to the length of time needed to retrieve an API which did not meet the timeframe/turnaround requirements of the project. There were no CSVs available with rating information, but the brewery CSV from Kaggle provided a foundation of brewery names that could be pulled from the untappd in a random sample. Additionally, the CSV provided location info for future analysis and app development.
 
-## Dashboard Example: 
 
-![Dashboard](https://github.com/KristiBischoff/craftbeer/tree/master/Images/BrewApp_pic1.jpg)
 
