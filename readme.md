@@ -4,8 +4,6 @@ Introduction and Background
 
 The formula for a perfect beer is non-existent. Throughout the world, beer has mass popularity with a range of taste options to meet consumer demand. However, some locations have a more abundant selection compared to others. While taste buds play a key role in like or dislike of a beer, there are some beers that rank a lot higher, and people can mutually agree on this. However, venue can make or break the experience of craft beers. Due to the increasing demand and growing market for beer "design", and the social construct of it, it would be useful to have an idea of top rated breweries in the United States. The purpose of this project is to develop a flask application that displays web scraped data from the top rated breweries from the untappd website.
 
-[pic1](static/images/counter_pic.jpg)
-
 Methods and Data Source
 
 The original data sources include the breweries.csv from Kaggle, and the web scrape from "untappd.com". The breweries chosen for the web scrape was a random sample of 20 breweries from the csv, which were identified through the search navigator on untappd.
@@ -20,5 +18,5 @@ The scrape function stored the python dictionary in MongoDB, and bson.json was u
 
 Dashboard Example: 
 
-[pic2](static/images/BrewApp_pic.jpg)
+![pic2](static/images/BrewApp_pic.jpg)
 
