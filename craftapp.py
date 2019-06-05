@@ -8,7 +8,7 @@ def init_browser():
     return Browser("chrome", headless=False)
 
 # File to Load- obtain brewery csv
-file_to_load2 = "breweries.csv"
+file_to_load2 = "Resources/breweries.csv"
 
 #Make into dataframe
 brewery_pd = pd.read_csv(file_to_load2, encoding="utf-8")
