@@ -1,4 +1,4 @@
-# Craft Beer App/ Web Scrape and Dashboard
+# Craft Beer App/Web Scrape and Dashboard
 
 ## Introduction and Background
 
